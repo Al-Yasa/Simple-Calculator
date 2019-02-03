@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Simple Calculator - Al-Yasa'</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="images/favicon.png">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="calculator">
+        <!-- Start of Display -->
+        <div class="display">
+            <div class="operation"></div>
+            <div class="output">0</div>
+        </div>
+        <!-- End of Display -->
+
+        <!-- Start of Keys -->
+        <div class="keys">
+
+            <div class="row" id="row-id">
+                <button class="btn"" id="clear">C</button>
+                <button class="btn" id="op-plus-minus">+/-</button>
+                <button class="btn" id="backspace">del</button>
+                <button class="btn operator" id="op-divide">&#247;</button>
+            </div>
+
+            <div class="row">
+                <button class="btn number" id="num-7">7</button>
+                <button class="btn number" id="num-8">8</button>
+                <button class="btn number" id="num-9">9</button>
+                <button class="btn operator" id="op-multiply">&#215;</button>
+            </div>
+
+            <div class="row">
+                <button class="btn number" id="num-4">4</button>
+                <button class="btn number" id="num-5">5</button>
+                <button class="btn number" id="num-6">6</button>
+                <button class="btn operator" id="op-minus">-</button>
+            </div>
+
+            <div class="row">
+                <button class="btn number" id="num-1">1</button>
+                <button class="btn number" id="num-2">2</button>
+                <button class="btn number" id="num-3">3</button>
+                <button class="btn operator" id="op-plus">+</button>
+            </div>
+
+            <div class="row">
+                <button class="btn number" id="num-0">0</button>
+                <button class="btn" id="decimal">.</button>
+                <button class="btn operator" id="op-equal">=</button>
+            </div>
+
+        </div>
+        <!-- End of Keys -->
+    </div>
+    <script src="js/app.js"></script>
+</body>
+</html>

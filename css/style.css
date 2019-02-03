@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
+
+/* this is for offline use of font:
+
+    @font-face {
+    font-family: 'Quicksand';
+    src: url(../fonts/Quicksand-Regular.ttf) format('truetype'); /* webfont from https://fonts.google.com/specimen/Quicksand
+} */
+
+/****
+    #272727 -- dark grey
+    #2e2e2e -- grey
+    #393939 -- light grey
+    #ffcc00 -- yellow
+    #c04444 -- red
+****/
+
+/**** General ****/
+* {
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+
+html {
+    font-size: 30px;
+}
+
+body {
+    background-color: #272727;
+    font-family: 'Quicksand', sans-serif;
+    margin: 0;
+}
+
+button:focus {outline:0;}
+
+@media all and (min-width: 600px) {
+    html {
+        font-size: 50px;
+    }
+}
+
+@media all and (min-width: 1000px) {
+    html {
+        font-size: 70px;
+    }
+}
+
+@media all and (min-width: 700px) and (min-height: 600px) {
+    html {
+        font-size: 25px;
+    }
+}
+
+/**** Calculator ****/
+.calculator {
+    width: 100%;
+}
+
+@media all and (min-width: 1000px) {
+    .calculator {
+        width: 350px;
+        height: 600px;
+        margin: 30px auto 0;
+        box-shadow: 0 0 40px 20px rgba(0, 0, 0, 0.3);
+        border-radius: 5px;
+        overflow: hidden;
+    }
+}
+
+/**** Display ****/
+.display {
+    background: #393939;
+    height: 30vh;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    letter-spacing: 1px;
+    overflow: hidden;
+    border: 20px solid transparent;
+    font-size: 0.85rem;
+}
+
+.operation {
+    color: #272727;
+    background-color: #ffcc00;
+    padding: 0 2px;
+}
+
+.operation span {
+    margin: 0 5px 0;
+}
+
+.output {
+    color: #fff;
+    font-size: 1.6rem;
+}
+
+@media all and (min-width: 1000px) {
+    .display {
+        height: 30%;
+    }
+}
+
+/**** Keys ****/
+.keys {
+    height: 70vh;
+}
+
+.row {
+    display: flex;
+    height: 20%;
+}
+
+.btn {
+    margin: 0;
+    padding: 0;
+    width: 25%;
+    color: #fff;
+    border: 1px solid rgba(161, 162, 162, 0.1);
+    background-color: #2e2e2e;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.btn:active {
+    background-color: #383838
+}
+
+.operator {
+    background-color: #272727;
+}
+
+.operator:active {
+    background-color: #313131;
+}
+
+#clear {
+    background-color: #c04444;
+}
+
+#clear:active {
+    background-color: #d35252;
+}
+
+#num-0 {
+    width: 50%;
+}
+
+#op-equal {
+    background-color: #ffcc00;
+    color: #272727;
+}
+
+#op-equal:active {
+    background-color: rgb(255, 212, 83);
+}
+
+@media all and (min-width: 1000px) {
+    .keys {
+        height: 70%;
+    }
+}
