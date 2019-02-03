@@ -5,6 +5,28 @@ const OUTPUT = document.querySelector('.output');
 let done = true;
 let result = 0;
 const KEYS = document.querySelector('.keys');
+const AllowedKeys = {
+    46: 'delete',
+    32: 'spacebar',
+    8: 'backspace',
+    111: '/',191: '/',
+    106: '*',
+    109: '-',189: '-',
+    107: '+',
+    13: 'enter',
+    187: 'equal',
+    110: '.',190: '.',
+    105: '9',57: '9',
+    104: '8',56: '8',
+    103: '7',55: '7',
+    102: '6',54: '6',
+    101: '5',53: '5',
+    100: '4',52: '4',
+    99: '3',51: '3',
+    98: '2',50: '2',
+    97: '1',49: '1',
+    96: '0',48: '0',
+};
 
 /**** Funcitons ****/
 /** Key Functions **/
@@ -150,6 +172,27 @@ function equal() {
     }
 }
 
+/** Keyboard Functions **/
+function handleInput(input) {
+    if (input) {
+        if (input === 'delete' || input === 'spacebar') {clear();}
+        else if (input === 'backspace') {backspace();}
+        else if (input === '/') {divide();}
+        else if (input === '*') {multiply();}
+        else if (input === '-') {minus();}
+        else if (input === '+') {plus();}
+        else if (input === 'enter' || input === 'equal') {equal();}
+        else if (input === '.') {decimal();}
+        else if (input.match(/[0-9]/g)) {addNum(Number(input));}
+
+        // console.log('result: ' + result);
+        // console.log('operationArray: ' + operationArray);
+
+        if (!done) { // don't update operation on screen after calculation (in order to show the operation and not replace it with the result -top screen-)
+            updateDisplay(); // update display after the press of every button
+        }
+    }
+}
 
 /** Helper Functions **/
 function updateDisplay() {
@@ -240,3 +283,5 @@ KEYS.addEventListener('click', (e) => {
         updateDisplay(); // update display after the press of every button
     }
 });
+
+document.addEventListener('keyup', e => handleInput(AllowedKeys[e.keyCode]));

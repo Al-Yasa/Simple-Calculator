@@ -121,14 +121,15 @@ button:focus {outline:0;}
 }
 
 .btn {
-    margin: 0;
-    padding: 0;
     width: 25%;
     color: #fff;
     border: 1px solid rgba(161, 162, 162, 0.1);
     background-color: #2e2e2e;
     font-size: 1rem;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .btn:active {
